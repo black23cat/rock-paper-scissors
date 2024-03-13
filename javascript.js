@@ -37,14 +37,21 @@ function playRound(playerSelection, computerSelection){
 
 // console.log(playRound(playerSelection, computerSelection));
 
+
 let playerScore = 0;
 let computerScore = 0;
 
+// function that run the game 
+
 function playGame(){
+
+//User input values and the computer get random value
 
     playerSelection = prompt("Rock, Paper or Scissors?").toLocaleLowerCase();
     computerSelection = getComputerChoice();
     result = playRound(playerSelection, computerSelection);
+
+//Each time user or computer win will get 1 point
 
 if (result.startsWith("You win")){
     playerScore = playerScore + 1;
@@ -69,7 +76,10 @@ playGame();
 console.log(playRound(playerSelection, computerSelection));
 console.log(`Your score ${playerScore} vs Computer score ${computerScore}`);
 
-
+//At the end of the round played, the score will be calculated to determine the winner of the game
+//if user win it will return message "You win, Congratulations!"
+//if user lose it will return message "You lose, Better luck next time!"
+//if the user and computer score are the same it will return "It's a tie."
 
 function finalScore(){
     if (playerScore === computerScore){
