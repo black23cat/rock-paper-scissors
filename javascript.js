@@ -10,3 +10,8 @@ function getComputerChoice() {
     }
     return b;
   }
+
+function getHumanChoice(){
+    let choice =  prompt('Choose your weapon Rock, Paper or Scissors.');
+    return choice.toLowerCase() || alert ('Canceled');
+}
