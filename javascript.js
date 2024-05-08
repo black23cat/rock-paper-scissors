@@ -30,3 +30,37 @@ function playRound(humanChoice, computerChoice){
 
 let humanScore = 0;
 let computerScore = 0;
+
+
+function playGame(){
+    playerSelection = getHumanChoice();
+    humanSelection = playerSelection.toLowerCase();
+    computerSelection = getComputerChoice();
+    result = playRound(humanSelection, computerSelection);
+
+    if (result.startsWith('You Win')){
+        humanScore++;
+      } else if (result.startsWith('You Lose')){
+        computerScore++;
+      }
+}
+
+playGame();
+console.log(playRound(humanSelection, computerSelection));
+console.log(`Your score ${humanScore} vs Computer score ${computerScore}`);
+
+playGame();
+console.log(playRound(humanSelection, computerSelection));
+console.log(`Your score ${humanScore} vs Computer score ${computerScore}`);
+
+playGame();
+console.log(playRound(humanSelection, computerSelection));
+console.log(`Your score ${humanScore} vs Computer score ${computerScore}`);
+
+playGame();
+console.log(playRound(humanSelection, computerSelection));
+console.log(`Your score ${humanScore} vs Computer score ${computerScore}`);
+
+playGame();
+console.log(playRound(humanSelection, computerSelection));
+console.log(`Your score ${humanScore} vs Computer score ${computerScore}`);
