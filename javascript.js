@@ -15,3 +15,18 @@ function getHumanChoice(){
     let choice =  prompt('Choose your weapon Rock, Paper or Scissors.');
     return choice.toLowerCase() || alert ('Canceled');
 }
+
+function playRound(humanChoice, computerChoice){
+    let message =  (humanChoice === computerChoice) ?  'Draw!'
+    : (humanChoice === 'rock') && (computerChoice === 'paper') ? 'You Lose, Paper beat Rock'
+    : (humanChoice === 'rock') && (computerChoice === 'scissors') ? 'You Win, Rock beat Scissors' 
+    : (humanChoice === 'paper') && (computerChoice === 'scissors') ? 'You Lose, Scissors beat Paper' 
+    : (humanChoice === 'paper') && (computerChoice === 'rock') ? 'You Win, Paper beat Rock' 
+    : (humanChoice === 'scissors') && (computerChoice === 'paper') ? 'You Win, Scissors beat Paper' 
+    : (humanChoice === 'scissors') && (computerChoice === 'Rock') ? 'You Lose, Rock beat Scissors' 
+    : 'Please choose rock, paper or scissors';
+    return message;
+}
+
+let humanScore = 0;
+let computerScore = 0;
