@@ -64,3 +64,15 @@ console.log(`Your score ${humanScore} vs Computer score ${computerScore}`);
 playGame();
 console.log(playRound(humanSelection, computerSelection));
 console.log(`Your score ${humanScore} vs Computer score ${computerScore}`);
+
+function finalResult(){
+    if (humanScore > computerScore){
+        return 'You win Congratulations!';
+    } else if (humanScore < computerScore){
+        return 'You Lose, Try again later.';
+    } else {
+        return 'Tie';
+    }
+}
+
+console.log (finalResult())
