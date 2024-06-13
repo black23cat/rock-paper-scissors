@@ -3,11 +3,21 @@
     <head>
         <meta charset='UTF-8'/>
         <title>Rock Paper Scissors</title>
-        <script src='javascript.js'></script>
+        <script src='javascript.js' defer></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
     <body>
-       <script>
-           console.log("Hello World")
-        </script>
+        <h1>Rock Paper Scissors Game</h1>
+        <div id="container">
+            <div class="button-container">
+                <button type="button" id="rock" value="rock">Rock</button>
+                <button type="button" id="paper" value="paper">Paper</button>
+                <button type="button" id="scissors" value="scissors">Scisors</button>
+            </div>
+            <button type="button" id="reset" class="reset">Reset</button>
+            <p class="round-result"></p>
+            <p class="score"></p>
+            <p class="winner"></p>
+        </div>
     </body>
 </html>
